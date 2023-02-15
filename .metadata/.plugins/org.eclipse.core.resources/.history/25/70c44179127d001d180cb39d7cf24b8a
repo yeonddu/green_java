@@ -1,0 +1,9 @@
+
+public class LogIn {
+	Scanner scan = new Scanner(System.in);
+}
+	public static void main(String[] args) {
+		System.out.println("LogIn을 위해 ID와 비밀번호를 입력하세요.");
+		System.out.println("ID 입력 : ");
+		String id = scan.nextLine();
+}

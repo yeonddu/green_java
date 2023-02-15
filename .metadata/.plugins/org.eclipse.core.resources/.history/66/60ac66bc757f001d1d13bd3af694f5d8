@@ -1,0 +1,47 @@
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Calculator extends JFrame{
+	private JTextField inputSpace; //JTextField로 화면 구현
+	public Calculator() {
+		setLayout(null); //레이아웃 관리자 제거
+		
+		inputSpace = new JTextField();
+		inputSpace.setEditable(false);//편집 불가능으로 설정
+		inputSpace.setBackground(Color.WHITE); //배경색 설정
+		inputSpace.setHorizontalAlignment(JTextField.RIGHT); //정렬 위치
+		inputSpace.setFont(new Font("Arial", Font.BOLD, 50)); //글씨체 설정
+		inputSpace.setBounds(8, 10, 270, 70); //x:8, y:10 위치에 270x70 크기
+		
+		
+		JPanel buttonPanel = new JPanel();//버튼을 담을 패널
+		buttonPanel.setLayout(new GridLayout(4, 4, 10, 10)); //격자 형태로 배치. 가로칸수 4, 세로칸수4, 좌우간격10, 상하간격10
+		buttonPanel.setBounds(8, 90, 270, 235); //위치 크기 설정
+		
+		String button_names[] = {"C", "÷", "×", "=", "7", "8", "9", "+", "4", "5", "6", "-", "1", "2", "3", "0"}; //계산기 버튼의 글자
+		JButton buttons[] = new JButton[button_names.length]; //버튼들의 배열
+		
+		add(inputSpace);
+		
+		
+		setTitle("계산기"); //창의 제목
+		setVisible(true); //보이기 여부
+		setSize(300, 370); //사이즈
+		setLocationRelativeTo(null); //화면 가운데에 띄우기
+		setResizable(false); //사이즈조절 불가능
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //창을 닫을 때 실행중인 프로그램도 같이 종료 
+	}
+	
+	public static void main(String []args) {
+		new Calculator();
+		
+	}
+	
+	
+}

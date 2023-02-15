@@ -1,0 +1,11 @@
+import javax.swing.JFrame;
+
+public class Calculator extends JFrame{
+	public Calculator() {
+		setTitle("°è»ê±â");
+		setVisible(true);
+		setSize(300, 370);
+		setLocationRelativeTo(null);
+		setResizable(false);
+	}
+}
